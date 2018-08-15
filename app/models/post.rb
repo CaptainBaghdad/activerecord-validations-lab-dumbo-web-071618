@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
 
 
   def clickbait-y
-    
+    words = [ "Won't Believe", "Secret", "Top [number]", "Guess"]
     
   end 
 

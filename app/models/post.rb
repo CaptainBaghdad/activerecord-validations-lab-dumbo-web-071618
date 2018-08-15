@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   ans = self.title
   def clickbait
     words = [ "Won\'t Believe","Secret", "Top","Guess"]
-    puts self.title.class
+    puts "This is the ans #{ans}"
     
    words.any? {|w| title.include?(w)}
 

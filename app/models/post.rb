@@ -7,10 +7,13 @@ class Post < ActiveRecord::Base
 
   ans = title
   def clickbait
-    words = [ "Won\'t Believe","Secret", "Top","Guess"]
-    puts "This is the ans #{ans}"
+    words = ['Won\'t Believe', 'Secret', 'Top', 'Guess']
     
-   words.any? {|w| title.include?(w)}
+    ans = words.any? {|w| title.include?(w) if title}
+    unless ans
+      errors.add(:bait_status, 'Doesn\'t include bait')
+    end
+      
 
 end
 

@@ -6,7 +6,11 @@ class Post < ActiveRecord::Base
 
 
   def clickbait-y
-    words = [ "Won't Believe", "Secret", "Top [number]", "Guess"]
+    words = [ "Won't Believe","Secret", "Top","Guess"]
+    
+    words.each do |w|
+      if self.title.includes?(w)
+    end 
     
   end 
 

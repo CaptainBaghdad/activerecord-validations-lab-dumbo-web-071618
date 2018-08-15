@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
     words = [ "Won't Believe","Secret", "Top","Guess"]
     
     words.each do |w|
-      if title.any?(w)
+      if title.include?(w)
         true 
         
       else

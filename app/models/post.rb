@@ -9,15 +9,7 @@ class Post < ActiveRecord::Base
   def clickbait_y
     words = [ "Won't Believe","Secret", "Top","Guess"]
     
-    words.each do |w|
-      if title.include?(w)
-        true 
-        
-      else
-        false 
-    end 
-    
-  end 
+   words.any? {|w| title.include?(w)}
 
 end
 

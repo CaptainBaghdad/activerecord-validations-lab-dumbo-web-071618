@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
 
 
   def clickbait_y
-    words = [ "Won't Believe","Secret", "Top","Guess"]
+    words = [ "Won\'t Believe","Secret", "Top","Guess"]
     
    words.any? {|w| title.include?(w)}
 
